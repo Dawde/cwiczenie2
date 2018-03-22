@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.IO
+using System.IO;
 
 namespace cwiczenie2
 {
@@ -17,7 +17,7 @@ namespace cwiczenie2
         {
             InitializeComponent();
             //miniTCPanel1.CurrentPath = @"c:\";
-            miniTCPanel1.LoadDrivers += MiniTCPanel1_LoadDrivers;
+            miniTotalCommander1.LoadDrivers += MiniTCPanel1_LoadDrivers;
             //DriveInfo
             //Path
             //Directory
@@ -26,8 +26,16 @@ namespace cwiczenie2
 
         private void MiniTCPanel1_LoadDrivers(miniTotalCommander obj)
         {
-            miniTotalCommander.Drivers = new string[] { "c:\\", "d:\\" };
-        }
+            DriveInfo[] drives = DriveInfo.GetDrives();
+            List<string> dyski = new List<string> { };
+            foreach (DriveInfo d in drives)
+            {
+                if(d.IsReady) dyski.Add(d.Name);
+            }
+
+
+            miniTotalCommander1.Drivers = dyski.ToArray();
+                }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {

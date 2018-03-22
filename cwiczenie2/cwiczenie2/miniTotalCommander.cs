@@ -23,6 +23,7 @@ namespace cwiczenie2
         public string currentPath
         {
             get { return textBox1.Text; }
+            set { textBox1.Text = value; }
         }
 
         public string[] Drivers
@@ -41,6 +42,19 @@ namespace cwiczenie2
         }
 
         private void miniTotalCommander_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (comboBox1.TabIndex != -1)
+            {
+                currentPath = comboBox1.Text;
+            }
+        }
+
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

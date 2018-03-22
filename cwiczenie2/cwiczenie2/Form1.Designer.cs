@@ -28,13 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.miniTotalCommander1 = new cwiczenie2.miniTotalCommander();
             this.SuspendLayout();
+            // 
+            // miniTotalCommander1
+            // 
+            this.miniTotalCommander1.Location = new System.Drawing.Point(12, 12);
+            this.miniTotalCommander1.Name = "miniTotalCommander1";
+            this.miniTotalCommander1.Size = new System.Drawing.Size(223, 267);
+            this.miniTotalCommander1.TabIndex = 0;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 261);
+            this.ClientSize = new System.Drawing.Size(284, 287);
+            this.Controls.Add(this.miniTotalCommander1);
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
@@ -42,6 +51,8 @@
         }
 
         #endregion
+
+        private miniTotalCommander miniTotalCommander1;
     }
 }
 
